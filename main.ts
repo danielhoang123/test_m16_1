@@ -2,6 +2,30 @@ basic.forever(function () {
 	
 })
 
+//% color="#FEBC68" weight=5 icon="\uf00d" block="M16"
+namespace MySensor {
+
+    const SENSOR_ADDR = 0x2A
+
+    /**
+     * Read raw sensor data
+     */
+    //% block="read sensor raw"
+    export function readSensorRaw(): number[] {
+
+        let result: number[] = []
+
+        // Read 5 bytes from I2C device
+        let buf = pins.i2cReadBuffer(SENSOR_ADDR, 5)
+
+        for (let i = 0; i < buf.length; i++) {
+            result.push(buf[i])
+        }
+
+        return result
+    }
+}
+
 //% color="#FEBC68" weight=3 icon="\uf017" block="M10"
 //% groups="['Get Info Time (Data)', 'Get Info Time (Text)', 'Setting Time', 'Alarm']"
 namespace ds3231 {
