@@ -4,12 +4,14 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "MakerEdu_Hardware": "pkg:MakerEdu_Hardware.json"
     },
     "files": [
         "main.blocks",
         "main.ts",
-        "README.md"
+        "README.md",
+        "MakerEdu_Hardware.json"
     ],
     "testFiles": [
         "test.ts"
