@@ -2,7 +2,7 @@ basic.forever(function () {
 	
 })
 
-//% color="#FEBC68" weight=3 icon="\uf017" block="M09"
+//% color="#FEBC68" weight=3 icon="\uf017" block="M10"
 //% groups="['Get Info Time (Data)', 'Get Info Time (Text)', 'Setting Time', 'Alarm']"
 namespace ds3231 {
     export enum Calendar {
